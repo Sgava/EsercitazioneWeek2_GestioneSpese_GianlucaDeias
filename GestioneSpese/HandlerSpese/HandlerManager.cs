@@ -17,6 +17,8 @@ namespace GestioneSpese.HandlerSpese
 
                 spesaRichiesta.LivelloApprovazione = "Manager";
 
+                
+
                 return spesaRichiesta;
             }
             else
@@ -24,10 +26,34 @@ namespace GestioneSpese.HandlerSpese
         }
 
 
-        /*    prova eventi
-         * 
-         *      //Delegato da utilizzare nell'evento
-                  public delegate void Notify(Publisher p, Notification notification);
+        /*    
+        //prova eventi
+          
+        //Delegato 
+               
+        public delegate void Notify(Publisher p, Notification notification);
+
+
+        //Evento
+                    
+        public event Notify OnPublish; 
+                
+        public void Publish()
+        {
+            if(OnPublish != null)
+            {
+                
+                Notification notifica = new Notification("Elaborazione spesa caricata sul file  ", DateTime.Now); 
+                OnPublish(this, notifica);
+            }
+        }
+
+
+
+
+
+
+
          * 
          */
     }

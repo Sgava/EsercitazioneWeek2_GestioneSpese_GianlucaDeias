@@ -18,7 +18,9 @@ List<ISpesa> speseDaElaborare = gestoreFile.GetAll();
 foreach (ISpesa spesa in speseDaElaborare)
 {
       gestoreFile.Aggiungi(manager.Handle(spesa));
-    
+
+    // Publish()
+
 }
 
 
